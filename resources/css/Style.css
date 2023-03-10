@@ -1,0 +1,421 @@
+html,body{
+    overflow-x: hidden;
+}
+body{
+    position: relative;
+}
+.li{
+    list-style: none;
+}
+.navbar{
+    line-height: 10vh;
+    height:7vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav-links{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+.nav-links-mobile{
+    display: flex;
+    justify-content: center;
+    width: 75%;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    width: 14rem;
+    height: 13vh;
+}
+.logoClick{
+    margin-bottom: 1rem;
+    width: 14rem;
+    height: 14vh;
+}
+.nav-links li{
+    color: black;
+    padding: 0 7px;
+    margin: 0 7px;
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+.nav-links-mobile li{
+    cursor: pointer;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: black;
+    margin: 1rem;
+}
+
+.lis{
+    position: relative;
+    fontSize:0.87rem;
+}
+.lis::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    left: 0;
+    bottom: 6px;
+    height: 2px;
+    background-color: #6c757d;
+    transition: 0.3s;
+}
+.lis:hover{
+    color: #6c757d;
+}
+.lis:hover::after{
+    width: 100%;
+
+}
+/*.lis1{*/
+/*    text-align: center;*/
+/*    font-size: 1.2rem;*/
+/*}*/
+/*.lis1:hover{*/
+/*    color:#6c757d;*/
+/*}*/
+
+.mobile-menu-icon{
+    display: none;
+    border: none;
+    background: none;
+    font-size: 20px;
+}
+
+@media (max-width: 1024px) {
+    .logoClick{
+        margin-bottom: 0rem;
+        width: 10rem;
+        height: 11vh;
+    }
+    .logo{
+        margin-bottom: 0rem;
+        width: 10rem;
+        height: 11vh;
+    }
+    .backHome{
+        background-size: cover;
+        width:100%;
+        height: 70vh;
+    }
+    .nav-links{
+        display: none;
+    }
+    .nav-links-mobile {
+        display: block;
+        list-style: none;
+        left: 0rem;
+        top: 6.2rem;
+        width: 100%;
+        background: whitesmoke;
+        z-index:6;
+        animation-name: back;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        transition: 0.3s;
+    }
+    @keyframes back {
+        0%{
+            height: 0;
+        }
+        25%{
+            height: 6rem;
+        }
+        50%{
+            height: 12rem;
+        }
+        75%{
+            height: 20rem;
+        }
+        100%{
+            height: auto;
+        }
+    }
+    .lis{
+        animation-name: linkNav;
+        animation-duration: 0.3s;
+        animation-iteration-count: 1;
+        transition: 0.3s;
+    }
+    @keyframes linkNav {
+        0%{
+            opacity: 0;
+        }
+        50%{
+            opacity: 0;
+        }
+        100%{
+            opacity: 1;
+        }
+    }
+    .lis1{
+        text-align: center;
+        font-size: 1.2rem;
+    }
+    .lis1:hover{
+        color:#6c757d;
+    }
+    .nav-links-mobile .lis{
+        padding: 0;
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+        text-align: center;
+        color: black;
+        /*padding-left: 0.9rem;*/
+
+    }
+
+    .mobile-menu-icon{
+        position: absolute;
+        display: block;
+        right: 20px;
+        top: 0.5rem;
+        z-index: 15;
+    }
+    .ulLinks{
+        padding-right: 12rem;
+    }
+    .fin{
+        padding-left: 3rem;
+    }
+    .imgRes{
+        padding-top: 2rem;
+    }
+    .pRes{
+        font-size: 5rem;
+        width: auto;
+    }
+    .rowRes{
+        margin-top: 10rem;
+    }
+    .links1{
+        width: 8rem;
+    }
+    .links{
+        width: 12rem;
+    }
+    .home1{
+        height: 50vh;
+        width:15rem;
+        margin-right: 2rem;
+    }
+}
+@media (max-width: 412px){
+    .ppRes{
+        width: 19rem;
+    }
+}
+@media (max-width: 768px){
+    .lanRes{
+        padding-left: 6rem;
+    }
+    .links1{
+        width: 8rem;
+    }
+   . imgRes{
+        padding-top: 2rem;
+    }
+
+    .comLink{
+        width: 12rem;
+    }
+    .links{
+        width: 12rem;
+    }
+    .home1{
+        width:15rem;
+        margin-right: 2rem;
+    }
+    .pRes{
+        font-size: 4rem;
+    }
+}
+@media (max-width: 820px){
+
+    .links1{
+        width: 8rem;
+    }
+    .links{
+        width: 12rem;
+    }
+    .lanRes{
+        padding-left: 4rem;
+    }
+    .comLink{
+        width:12rem;
+    }
+
+    .imgRes{
+        padding-top: 2rem;
+    }
+}
+
+.fontFamily{
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+.backHome{
+    background-size: cover;
+    width:100%;
+    background-position: center;
+    height: 95vh;
+}
+.home1{
+    width: 23rem;
+    height: 60vh;
+}
+.textBlack{
+    color: black;
+}
+.textGray{
+    color: rgb(100, 103, 108);
+}
+.fontSize{
+    font-size: 0.8rem;
+}
+.fontWeight{
+    font-weight: 600;
+}
+.button22{
+    border: 1px solid black;
+    border-radius: 3px;
+    background: rgba(0.3,0.3,0.3,0);
+    width: 9em;
+    height: 8vh;
+    color: black;
+    font-size: 1.2rem;
+}
+.button22:hover{
+    color: white;
+    background: #2F4F4F;
+    transition: all 0.7s;
+}
+.ulLinks{
+    list-style: none;
+}
+.links{
+    text-decoration: none;
+}
+.links:hover{
+    color:white;
+    transform: translateX(0.6rem);
+    transition: 0.8s;
+}
+.textWhite{
+    color: white;
+}
+.card{
+    background: black;
+}
+.textFooter{
+    color: #a3a3a3;
+    font-size: 0.9rem;
+}
+.IconSocial{
+    background: rgba(255,255,255,0.1) ;
+    border: 1px solid  rgba(255,255,255,0.1);
+    border-radius: 50%;
+    transition: all 0.6s;
+}
+.IconSocial:hover{
+    background: #a3a3a3 ;
+    border: 1px solid  #a3a3a3;
+    border-radius: 50%;
+    transition: all 0.6s;
+}
+.textField{
+    width:87%;
+}
+.backArch{
+    background: url("Images/home1.jpg");
+    background-position: center;
+    background-size: cover;
+    height: 50vh;
+}
+.backAbout{
+    background: url("Images/homee.webp");
+    background-position: center;
+    background-size: cover;
+    height: 60vh;
+}
+.img1{
+    height: 50vh;
+    width: 17rem;
+    transform: scale(1,1);
+    transition: all 0.3s;
+}
+.img1:hover{
+    transform: scale(1.1,1.1);
+    transition: all 0.3s;
+}
+.cont1{
+    overflow: hidden;
+}
+.ImgAbout{
+    width: 30rem;
+    height: 68vh;
+}
+.backColor{
+    background:#A9A9A9;
+    opacity: 0.7;
+    z-index: 1;
+    height: 60vh;
+    width:100%;
+    background-size: cover;
+}
+.cont2{
+    background: url("Images/arch1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width:100%;
+    background-position: center;
+}
+.cont3{
+    background: url("Images/design1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width:100%;
+    background-position: center;
+}
+.cont4{
+    background: url("Images/land1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width:100%;
+    background-position: center;
+}
+.cont5{
+    background: url("Images/fit3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width:100%;
+    background-position: center;
+}
+.cont6{
+    background: url("Images/contra8.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 60vh;
+    width:100%;
+    background-position: center;
+}
+.textCont{
+
+    position: relative;
+    top: 14rem;
+    z-index: 3;
+}
+.homeCont{
+    background: #FFF8DC;
+    height: 120vh;
+    z-index: 1;
+}
