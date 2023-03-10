@@ -9,15 +9,9 @@ import {
     faLocationDot,
     faPhone
 } from "@fortawesome/free-solid-svg-icons";
+import {useNavigate} from "react-router-dom";
 function Footer() {
-    const footer =[{
-        title:"About Us"
-    },{
-        title: "Quick Links"},{
-        title: "Open Hours"
-    },{
-        title:"Newsletter"
-    }]
+    const nav =useNavigate()
 return(
     <>
         <div className="card">
@@ -31,12 +25,12 @@ return(
                 <Col md="3" >
                     <h5  style={{color:"#a3a3a3"}} className="fonWeight fontFamily mx-4 mt-3 comLink">Company Links</h5>
                     <ul className="ulLinks mt-4">
-                        <li   className="links links1 my-1"><a href="" className="textFooter fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Home</span></a></li>
-                        <li  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Architecture</span></a></li>
-                        <li  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Landscape</span></a></li>
-                        <li  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Interior Design</span></a></li>
-                        <li  className="links my-1 links1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Fit Out</span></a></li>
-                        <li  className="links my-1 links1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Contracting</span></a></li>
+                        <li onClick={()=>nav("/")}   className="links links1 my-1"><a href="" className="textFooter fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Home</span></a></li>
+                        <li onClick={()=>nav("/architecture")}  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Architecture</span></a></li>
+                        <li onClick={()=>nav("/land")}  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Landscape</span></a></li>
+                        <li onClick={()=>nav("/design")}  className="links links1 my-1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Interior Design</span></a></li>
+                        <li onClick={()=>nav("/fit")}  className="links my-1 links1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Fit Out</span></a></li>
+                        <li onClick={()=>nav("/contracting")}  className="links my-1 links1"><a href="" className="textFooter  fontFamily links"><FontAwesomeIcon icon={faCaretRight}/> <span className="mx-1">Contracting</span></a></li>
                     </ul>
 
                 </Col>
